@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Programming For Kids</title>
+	<style>
+		body {
+			background-color: #C5E1EA;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+
+		h1 {
+			color: #3366CC;
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+
+		.week {
+			background-color: #FFFFFF;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			margin: 20px auto;
+			padding: 20px;
+			text-align: center;
+			width: 200px;
+			position: relative;
+		}
+
+		.week h2 {
+			color: #3366CC;
+			font-size: 24px;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+
+		.week p {
+			color: #666666;
+			font-size: 16px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.week .checkbox-container {
+			position: absolute;
+			top: -20px;
+			right: -20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: #3366CC;
+			color: #FFFFFF;
+			font-size: 24px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.week .checkbox {
+			display: none;
+		}
+
+		.week .checkbox:checked + .checkbox-container {
+			background-color: #FFFFFF;
+			color: #3366CC;
+		}
+
+		.week .checkbox:checked + .checkbox-container::after {
+			content: '\2714';
+		}
+	</style>
+</head>
+<body>
+	<h1>Programming For Kids</h1>
+    {% for wk in weekmods %}
+	<div class="week">
+		<input type="checkbox" class="checkbox" checked>
+		<div class="checkbox-container"></div>
+		<h2><a href="../allreadingmaterials/">Week {{wk.id}}</a></h2>
+		<p>{{wk.contents}}</p>
+	</div>
+    {% endfor %}
+    <!---
+	<div class="week">
+		<input type="checkbox" class="checkbox" checked>
+		<div class="checkbox-container"></div>
+		<h2>Week 2</h2>
+		<p>Some content for week 2 goes here...</p>
+	</div>
+	<div class="week">
+		<input type="checkbox" class="checkbox">
+		<div class="checkbox-container"></div>
+		<h2>Week 3</h2>
+		<p>Some content for week 3 goes here...</p>
+	</div>
+	<div class="week">
+		<input type="checkbox" class="checkbox">
+		<div class="checkbox-container"></div>
+		<h2>Week 4</h2>
+		<p>Some content for week 4 goes here...</p>
+	</div> -->
+</body>
+</html>

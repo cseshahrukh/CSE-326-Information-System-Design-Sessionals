@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1>{{ topic.contentTopic }}</h1>
+
+<p>{{ topic.content }}</p>
+
+{% if  topic.sectionId  == nextTopic.sectionId  %}
+  <p>Head To <a href="../details/{{ topic.id|add:"1" }}">Next Section</a></p>
+{% else %}
+  <h1><a href="../../mcq/1/1">MCQ</a></p></h1>
+{% endif %}
+
+<p>Back to <a href="..">All Reading Materials</a></p>
+
+</body>
+</html>

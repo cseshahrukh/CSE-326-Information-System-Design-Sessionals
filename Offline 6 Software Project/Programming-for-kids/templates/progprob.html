@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>C Programming Problem</title>
+    <script type="text/javascript">
+        function checkCode(){
+            //call for api here to check the code
+            document.getElementById("show_message").style.display = "block";
+            document.getElementById("next").style.display = "block"; 
+        }
+    </script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      #container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+      }
+
+      h1, h2 {
+        color: #008080;
+      }
+
+      pre {
+        background-color: #f8f8f8;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+
+      textarea {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        resize: none;
+        height: 300px;
+        width: 100%;
+      }
+
+      input[type="submit"] {
+        background-color: #008080;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #005454;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: #008080;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .btn:hover {
+        background-color: #005454;
+      }
+
+      .next-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .home-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>C Programming Problem</h1>
+      <p>{{prob.problem}}</p>
+      <h2>Sample Input</h2>
+      <pre>
+        {{prob.sample_input}}
+      </pre>
+      <h2>Sample Output</h2>
+      <pre>
+        {{prob.sample_output}}
+      </pre>
+      <h2>Editor</h2>
+      <form onsubmit="event.preventDefault(); checkCode();">
+        <textarea name="code" placeholder="Enter your code here..."></textarea>
+        <br>
+        <input type="submit" value="Submit" id="codesubmit"  >
+      </form>
+    </div>
+    <div id="show_message" hidden>
+        <p>Successfully submitted</p>
+    </div>
+    <div id="next" hidden>
+        <a href="../week/1" class="btn next-btn">NEXT</a>
+    </div>
+    <a href="#" class="btn home-btn">Home</a>
+  </body>
+</html>

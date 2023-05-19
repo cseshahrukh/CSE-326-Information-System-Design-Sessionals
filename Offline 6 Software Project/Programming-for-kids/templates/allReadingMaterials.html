@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Reading Materials</h1>
+
+<ul>
+  {% for x in allcontents %}
+      <li><a href="details/{{ x.id }}">{{x.contentTopic}}</a></li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
